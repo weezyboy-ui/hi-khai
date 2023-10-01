@@ -1,0 +1,21 @@
+#oneButton {
+ position: fixed;
+ padding: 10px 20px;
+ font-size: 18px;
+
+ top: 50%;
+ left: 45%;
+ transform: translate(-50%, -50%);
+ z-index: 9999;
+}
+#twoButton {
+    position: fixed;
+    padding: 10px 20px;
+    font-size: 18px;
+   
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+
+}

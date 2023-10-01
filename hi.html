@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi Khaizel!</title>
+    <link rel="stylesheet" href="hi.css">
+    <img id="pic" src="ds.gif" alt="">
+    <style>
+        #pic {
+            position: absolute;
+            left: 41%;
+            top: 28%;
+            height: 25%;
+        }
+        #oneButton {
+                position: fixed;
+                padding: 10px 20px;
+                font-size: 18px;
+
+                top: 55%;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 9999;
+            }
+            #twoButton {
+                position: fixed;
+                padding: 10px 20px;
+                font-size: 18px;
+            
+                top: 55%;
+                left: 55%;  
+                transform: translate(-50%, -50%);
+                z-index: 9999;
+
+            }
+
+            .hiddenf{
+                position: relative;
+                display: none;
+                left: 30cm;
+
+
+            }
+
+            .message {
+                position: fixed;
+                padding: 10px 20px;
+                font-size: 18px;
+                background-color: white;
+                border: 1px solid black;
+                display: none;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 9999;
+            }
+
+    </style>
+    <script>
+
+         function showMessage(message) {
+            var div = document.createElement('div');
+            div.style.position = 'fixed';
+            div.style.top = '30%';
+            div.style.left = '49%';
+            div.style.transform = 'translate(-50%, -50%)';
+            div.style.backgroundColor = 'rgba(0, 0, 0)';
+            div.style.color = 'white';
+            div.style.padding = '20px';
+            div.style.borderRadius = '5px';
+            div.style.zIndex = '1000';
+            div.textContent = message;
+
+            document.body.appendChild(div);
+
+            setTimeout(function() {
+                document.body.removeChild(div);
+            }, 500);
+        }
+
+        var clickCount = 0;
+
+        function handleClick() {
+
+            clickCount++;
+
+            if (clickCount === 1) {
+                showMessage('Hi Khaizel!');
+            } else if (clickCount === 2) {
+                showMessage('Goods raka?')
+            } else if(clickCount === 3) {
+                showMessage('if dili gani kay ambot, chati ko. if okay naka then idk')
+            } else if(clickCount === 4) {
+                showMessage('I hope you are doing well!')
+            } else if(clickCount === 5) {
+                showMessage('I hope you are having a great day!')
+            } else {
+                showMessage('I dont have anything to say rather than please smile!')
+            }
+
+        }
+
+        var clickCounte = 0;
+        
+        function secButton() {
+
+            clickCounte++;
+
+            if (clickCounte === 1){
+                showMessage('kalain katong isa pislita eys')
+            }else if(clickCounte === 2) {
+                showMessage('ngeeeee')
+            }else if(clickCounte === 3) {
+                showMessage('hays')
+            } else {
+                document.getElementById('img').classList.remove('hiddenf')
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <button class="button" id='oneButton' onclick="handleClick()">PISLITA</button>
+    <button class="button" id='twoButton' onclick="secButton()">DIKO</button>
+    <img id="img" class="hiddenf" src="khai.webp" alt="khai">
+
+</body>
+</html>
